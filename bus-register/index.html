@@ -1,0 +1,38 @@
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/systemjs/3.1.6/system.min.js"></script>
+    <script src="https://cdn.staticfile.org/react/16.8.6/umd/react.development.js"></script>
+    <script src="https://cdn.staticfile.org/react-dom/16.8.6/umd/react-dom.development.js"></script>
+    <script src="https://cdn.staticfile.org/babel-standalone/7.0.0-beta.3/babel.min.js"></script>
+    <script src="https://cdn.staticfile.org/vue/2.6.10/vue.min.js"></script>
+    <script src="./scripts/listener.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <header>nav</header>
+        <hr>
+        <div id="react-app"></div>
+        <hr>
+        <div id="vue-app">
+            <vue-app></vue-app>
+        </div>
+    </div>
+<script type="text/babel" data-type="react-app">
+        System.import("./micro/react-app-7c100655.js").then(_ => {
+        let App = _.default;
+        ReactDOM.render(
+            <App/>,
+            document.querySelector("#react-app"))
+        })
+    </script><script data-type="vue-app">
+        new Vue({
+            el: "#vue-app",
+            components: {
+                "vue-app": () => System.import("./micro/vue-app-6702fd79.js")
+            }
+        })
+    </script></body>

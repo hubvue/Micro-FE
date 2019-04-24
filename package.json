@@ -1,0 +1,17 @@
+{
+  "name": "micro-fe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "node ./bin/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "cheerio": "^1.0.0-rc.3",
+    "scripty": "^1.9.1",
+    "shelljs": "^0.8.3"
+  }
+}
