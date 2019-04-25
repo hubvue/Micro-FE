@@ -1,2 +1,2 @@
 # Micro-FE
-🍊踏上微前端的探索之旅。
+🍊走进Micro Frontends：一次Micro Frontends 的简单实践
