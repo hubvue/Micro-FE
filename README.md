@@ -2,7 +2,7 @@
 🍊走进Micro Frontends：一次Micro Frontends 的简单实践
 
 ## 前端如何不同团队间功能组合？
-现代化的Web程序大多数都是又单个团队进行开发的，这样存在的问题在于A团队开发的项目只能由A团队完成，如果在A团队中想引入B团队中的功能就会很麻烦，虽然iframe可以解决，但是iframe也存在者诸多的问题。
+现代化的Web程序大多数都是又单个团队进行开发的，这样存在的问题在于A团队开发的项目只能由A团队完成，如果在A团队中想引入B团队中的功能就会很麻烦，虽然iframe可以解决，但是iframe也存在者诸多的问题。。
 
 ## iframne现存的问题
 iframe是html中的内联框架，其作用是可以在主页内嵌入另外一个网站，但是它存在者很多问题。
@@ -102,7 +102,7 @@ Webpack中有`webpack-system-register`这个插件，可以把webpack的模块�
     <title>Document</title>
 </head>
 <body>
-    
+
 </body>
 </html>
 ```
@@ -370,7 +370,7 @@ const buildApps = () => {
 }
 //执行部署。
 const run = async () => {
-} 
+}
 run();
 
 ```
@@ -390,13 +390,13 @@ const buildApps = () => {
                 shell.exit(1);
                 reject();
             } else {
-                
+
                 shell.cp("./dist/*.js", "../../bus-register/micro")
                 shell.cd("../");
                 shell.echo("Success!");
                 resolve();
-            } 
-        })   
+            }
+        })
    })
 }
 ```
@@ -410,13 +410,13 @@ const buildApps = () => {
 const readDir = () => {
     return new Promise((resolve,reject) => {
         shell.cd("../bus-register/")
-        
+
         fs.readdir("micro/",(err,files) => {
             if(err){
                 reject(err);
             }
             let fileMaps = files.map(file => {
-                
+
                 let frame = file.split("-")[0];
                 let name = `${file.split("-")[0]}-${file.split("-")[1]}`
                 //找出子项目是怎么框架构建的，并使用type标识，
@@ -460,7 +460,7 @@ const writerBus = (files) => {
                     reject(err);
                 }
                 resolve();
-            })  
+            })
         })
     })
 }
